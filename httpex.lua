@@ -3,24 +3,6 @@
     https://wiki.facepunch.com/gmod/Global.HTTP
     https://wiki.facepunch.com/gmod/Structures/HTTPRequest
 
-    Features:
-    - Clean, table-style HTTP API (GET, POST, PUT, DELETE, etc.)
-    - Built-in MIME type constants (JSON, HTML, images, audio, fonts, etc.)
-    - Input validation and simplified structure.
-    - Optional callbacks: success, failed. https://wiki.facepunch.com/gmod/Structures/HTTPRequest
-
-    Usage Example:
-    httpex.post("https://httpbin.org/post", {
-        body = util.TableToJSON({ hello = "world" }),
-        type = httpex.MIME_JSON,
-        success = function(code, body, headers)
-            print("Posted! Response:", body)
-        end,
-        failed = function(err)
-            print("Error while posting:", err)
-        end
-    })
-
     NOTE -----!
     HTTP-requests to destinations on private networks (such as 192.168.0.1, or 127.0.0.1) won't work.
     To enable HTTP-requests to destinations on private networks use Command Line Parameters -allowlocalhttp. (Dedicated servers only)
