@@ -24,9 +24,6 @@ httpex.default_params = {}
 local httpex = include("mylibs/httpex.lua")
 local body = util.TableToJSON({ hello = "world" }) -- JSON data
 
-local httpex = include("mylibs/httpex.lua")
-local body = util.TableToJSON({ hello = "world" }) -- JSON data
-
 -- POST method
 httpex.post("https://httpbin.org/post", {
     body = body,
